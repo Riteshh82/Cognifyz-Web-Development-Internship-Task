@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <h2>Add Two Numbers</h2>
+
+  <input type="number" id="firstNumber" placeholder="First Number">
+  <input type="number" id="secondNumber" placeholder="Second Number">
+  <button onclick="calculateSum()">Add</button>
+
+  <p id="output"></p>
+
+  <script>
+    function calculateSum() {
+      const num1 = parseFloat(document.getElementById('firstNumber').value);
+      const num2 = parseFloat(document.getElementById('secondNumber').value);
+
+      const sum = num1 + num2;
+
+      document.getElementById('output').textContent = 'The sum is: ' + sum;
+    }
+  </script>
+
+</body>
+</html>

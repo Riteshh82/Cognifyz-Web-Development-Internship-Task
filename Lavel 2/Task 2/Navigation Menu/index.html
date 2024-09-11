@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognifyz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      position: relative;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin: 0 10px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      display: block;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        align-items: center;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+      .nav-container {
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <ul class="nav-links">
+        <li><a href="https://cognifyz.com">Home</a></li>
+        <li><a href="https://cognifyz.com/about-us/">About</a></li>
+        <li><a href="https://cognifyz.com/services/">Services</a></li>
+        <li><a href="https://cognifyz.com/contact-us/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognifyz</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .slideshow {
+      position:absolute;
+      width: auto;
+      max-width: 600px;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      width: 100%;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow">
+    <div class="slides">
+      <img src="https://repository-images.githubusercontent.com/797892841/295c8e9b-ec8c-441a-88e0-20028310a68a" alt="Cognifyz">
+      <img src="https://themexriver.com/wp/glox-demo/wp-content/uploads/2022/05/bn1.png" alt="Cognifyz">
+      <img src="https://cognifyz.com/wp-content/uploads/2022/03/blog-3.jpg" alt="Cognifyz">
+      <img src="https://i.ytimg.com/vi/Aeqh8DGZTf0/maxresdefault.jpg" alt="Cognifyz">
+      <img src="https://cognifyz.com/wp-content/uploads/2022/06/sfsdg.png" alt="Cognifyz">
+      <img src="https://yt3.googleusercontent.com/tR73ejxeuG0fcN97vM5BxwO_1-aTkSbMoQ7gYZwJ7sAiN9u5KkdcTEzMW7wf47vc7zsSJ0zdAw=s900-c-k-c0x00ffffff-no-rj" alt="Cognifyz">
+      <img src="https://cognifyz.com/wp-content/uploads/2022/03/blog-1.jpg" alt="Cognifyz">
+      <img src="https://cognifyz.com/wp-content/uploads/2022/03/blog-4.jpg" alt="Cognifyz">
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    let index = 0;
+
+    function showSlides() {
+      index++;
+      if (index >= slides.children.length) {
+        index = 0;
+      }
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(showSlides, 3000);
+  </script>
+</body>
+</html>

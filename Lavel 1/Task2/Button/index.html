@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognifyz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #colorButton {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #colorButton:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    
+  <button id="colorButton">Cognifyz</button>
+
+  <script>
+    const button = document.getElementById('colorButton');
+
+    button.addEventListener('click', () => {
+      const isRed = button.style.backgroundColor === 'red';
+      button.style.backgroundColor = isRed ? 'blue' : 'red';
+    });
+  </script>
+
+</body>
+</html>
